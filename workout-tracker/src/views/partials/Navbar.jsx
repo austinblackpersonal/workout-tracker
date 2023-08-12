@@ -13,9 +13,26 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 // import AdbIcon from '@mui/icons-material/Adb';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
+import { Link } from 'react-router-dom';
 
 
-const pages = ['Workouts', 'Log a workout', 'View Progress'];
+
+const pages = [
+  {
+    id: 1,
+    name: 'Workouts',
+    link: '/workout-list'
+  }, 
+  {
+    id: 2,
+    name: 'Log a workout',
+    link: '/log-workout'
+  }, 
+  {
+    id: 3,
+    name: 'View Progress',
+    link: '/progress'}
+];
 const settings = ['Profile', 'Dashboard', 'Logout'];
 
 function Navbar() {
@@ -89,10 +106,10 @@ function Navbar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
+              {pages.map((page) => (  
+                  <MenuItem key={page.id} onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center"><Link to={page.link}>{page.name}</Link></Typography>
+                  </MenuItem>
               ))}
             </Menu>
           </Box>
@@ -118,11 +135,11 @@ function Navbar() {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                key={page}
+                key={page.id}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                <Link to={page.link} style={{color: 'white', textDecoration: 'none'}}>{page.name}</Link>
               </Button>
             ))}
           </Box>
