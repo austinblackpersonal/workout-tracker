@@ -1,18 +1,13 @@
 body {
-    background-image: url(https://media.istockphoto.com/id/600165836/photo/urban-female-athlete-focusing-on-her-goals-writting-on-notepad.webp?s=2048x2048&w=is&k=20&c=Ekn9A3iaRBiE2B0qUiMDHOMJhrTd_I8tQuhUh39XL2M=)
+    background-image: url(https://media.istockphoto.com/id/600165836/photo/urban-female-athlete-focusing-on-her-goals-writting-on-notepad.webp?s=2048x2048&w=is&k=20&c=Ekn9A3iaRBiE2B0qUiMDHOMJhrTd_I8tQuhUh39XL2M=);
 }
 
 .Home {
-    
-    font-size: 1.5rem;
-    background-position-x: 0%;
-    background-position-y: 0%;
-    background-attachment: scroll;
-    background-size: auto;
-    background-origin: padding-box;
-    background-clip: border-box;
     text-align: center;
-    padding-top: 25%;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    margin-top: 100px;
 }
 
 
